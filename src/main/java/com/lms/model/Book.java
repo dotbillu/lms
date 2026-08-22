@@ -20,4 +20,12 @@ public class Book {
   public UUID getId() {
     return this.id;
   }
+
+  public void updateStatus(BookStatus status) {
+    this.status = status;
+  }
+
+  public BookStatus getStatus() {
+    return this.status;
+  }
 }

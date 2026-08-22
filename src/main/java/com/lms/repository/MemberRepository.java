@@ -22,7 +22,7 @@ public class MemberRepository {
   public List<Member> findAll() {
     ArrayList<Member> allMembers = new ArrayList<>();
     for (Member member : this.member.values()) {
-      allMembers.addLast(member);
+      allMembers.add(member);
     }
     return allMembers;
   }

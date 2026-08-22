@@ -22,7 +22,7 @@ public class BookRepository {
   public List<Book> findAll() {
     ArrayList<Book> allBooks = new ArrayList<>();
     for (Book book : this.books.values()) {
-      allBooks.addLast(book);
+      allBooks.add(book);
     }
     return allBooks;
   }
