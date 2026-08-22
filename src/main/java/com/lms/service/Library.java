@@ -1,5 +1,6 @@
 package com.lms.service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
@@ -52,5 +53,29 @@ public class Library {
       throw new BookNotFoundException();
     if (member == null)
       throw new MemberNotFoundException();
+  }
+
+  public void addBook(Book book) {
+    bookRepo.add(book);
+  }
+
+  public void addMember(Member member) {
+    memberRepo.add(member);
+  }
+
+  public void removeBook(UUID bookId) {
+    bookRepo.delete(bookId);
+  }
+
+  public void removeMember(UUID memberId) {
+    memberRepo.delete(memberId);
+  }
+
+  public List<Book> listBooks() {
+    return bookRepo.findAll();
+  }
+
+  public List<Member> listMembers() {
+    return memberRepo.findAll();
   }
 }

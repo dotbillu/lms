@@ -28,4 +28,15 @@ public class Book {
   public BookStatus getStatus() {
     return this.status;
   }
+
+  @Override
+  public String toString() {
+    return "Book{" +
+        "id=" + id +
+        ", title='" + title + '\'' +
+        ", author='" + author + '\'' +
+        ", genre='" + genre + '\'' +
+        ", status=" + status +
+        '}';
+  }
 }

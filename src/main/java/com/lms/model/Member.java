@@ -9,6 +9,7 @@ public class Member extends Person {
   public Member(String name, int age, String gender) {
     super(name, age, gender);
     this.books = new ArrayList<Book>();
+    System.out.println("Member created: " + this.id);
   }
 
   public void addBook(Book book) {
@@ -27,4 +28,13 @@ public class Member extends Person {
     return this.books.contains(book);
   }
 
+  @Override
+  public String toString() {
+    return "Member{" +
+        "id=" + getId() +
+        ", name='" + name + '\'' +
+        ", age=" + age +
+        ", gender='" + gender + '\'' +
+        '}';
+  }
 }
