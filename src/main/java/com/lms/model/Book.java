@@ -1,17 +1,23 @@
 package com.lms.model;
 
+import java.util.UUID;
+
 public class Book {
-  String id;
+  UUID id;
   String title;
   String author;
   String genre;
   BookStatus status;
 
-  public Book(String id, String title, String author, String genre) {
-    this.id = id;
+  public Book(String title, String author, String genre) {
+    this.id = UUID.randomUUID();
     this.title = title;
     this.author = author;
     this.genre = genre;
     this.status = BookStatus.AVAILABLE;
+  }
+
+  public UUID getId() {
+    return this.id;
   }
 }
